@@ -100,11 +100,11 @@ running cluster and HB analysis
 
 - `solute-water-contact-counts.csv`: If `hydrogen_bonding=True`, output of the average number of hydrogen-bonds between a solute atom (that is not in the excluded molecules list) and a water atom. A hydrogen-bond is defined if an atom on water is `max_cutoff` distance or less from a solute atom. The first column is the frame number analysed and the rest of the columns contain the average number of hydrogen-bonds with water per solute atom. Each header for the solute atoms is formatted as molecule name_atom name_number of molecules in the simulation.
 ```
-frame	*0_O_11	*0_O1_11    *0_H2_11 ...
-0	    1.091	0.909	    0.455
-1	    0.909	1.091	    1.091
-2	    1.273	0.545	    0.364
-3	    1.091	1.636	    0.273
+frame,*0_O_11,*0_O1_11,*0_H2_11 ...
+0,1.091	0.909,0.455
+1,0.909	1.091,1.091
+2,1.273	0.545,0.364
+3,1.091	1.636,0.273
 .
 .
 .
@@ -112,11 +112,11 @@ frame	*0_O_11	*0_O1_11    *0_H2_11 ...
 
 - `solute-solute-contact-counts.csv`: Output of the average number of contacts between a solute atom (that is not in the excluded molecules list) and any solute atom in a different molecule. A contact is defined if a solute atom in another molecule is `max_cutoff` distance or less from a solute atom. The first column is the frame number analysed and the rest of the columns contain the average number of solute-solute contacts per solute atom. Each header for the solute atoms is formatted as molecule name_atom name_number of molecules in the simulation.
 ```
-frame	*0_O1_11	*0_H10_11	*0_H9_11 ...
-0	    0.091	    0.091	    0
-1	    0	        0	        0.273
-2	    0.091	    0.091	    0.091
-3	    0.091	    0	        0
+frame,*0_O1_11,*0_H10_11,*0_H9_11 ...
+0,0.091,0.091,0
+1,0,0,0.273
+2,0.091,0.091,0.091
+3,0.091,0,0
 .
 .
 .
